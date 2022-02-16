@@ -6,9 +6,11 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
     const othersInput = document.getElementById('others-input').value;
     let totalExpenses = document.getElementById('total-expenses');
     let balance = document.getElementById('balance');
-    total = parseInt(foodInput) + parseInt(rentInput) + parseInt(othersInput) + parseInt(utilityInput);
+
+    total = parseFloat(foodInput) + parseFloat(rentInput) + parseFloat(othersInput) + parseFloat(utilityInput);
+
     totalExpenses.innerText = total;
-    remaining = parseInt(incomeInput) - total;
+    remaining = parseFloat(incomeInput) - total;
     balance.innerText = remaining;
 
 });

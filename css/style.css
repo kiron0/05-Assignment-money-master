@@ -10,7 +10,7 @@
 input{
     border: none;
     background-color: #DCDCDC;
-    border-radius: 2px;
+    border-radius: 5px;
     padding: .9rem 1.5rem;
 }
 
@@ -23,13 +23,3 @@ button{
     font-weight: 500;
     font-size: 1.5rem;
 }
-
-/* p{
-    font-size: 18px;
-    font-weight: 500;
-} */
-
-/* h3{
-    font-size: 22px;
-    font-weight: 600;
-} */
