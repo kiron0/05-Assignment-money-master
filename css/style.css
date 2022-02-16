@@ -41,7 +41,7 @@ button{
 /* For medium devices */
 @media screen and (min-width: 576px) {
     input{
-        font-size: .2rem;
+        font-size: 1.3rem;
     }
 }
 
