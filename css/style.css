@@ -12,6 +12,7 @@ input{
     background-color: #DCDCDC;
     border-radius: 5px;
     padding: .9rem 1.5rem;
+    font-size: 1.5rem;
 }
 
 button{
@@ -21,5 +22,32 @@ button{
     border-radius: 5px;
     color: #FFF;
     font-weight: 500;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 420px) {
+    input{
+        font-size: 1rem;
+    }
+
+    .save-btn{
+        margin-top: 12px;
+        margin-left: 5px;
+    }
+}
+
+/* For medium devices */
+@media screen and (min-width: 576px) {
+    input{
+        font-size: .2rem;
+    }
+}
+
+/* For large devices */
+@media screen and (min-width: 992px) {
+    input{
+        font-size: 1.3rem;
+    }
 }
