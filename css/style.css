@@ -1,0 +1,30 @@
+/* .calculate-container{
+    row-gap: 2rem;
+} */
+
+input{
+    border: none;
+    background-color: #DCDCDC;
+    border-radius: 2px;
+    padding: .9rem 1.5rem;
+}
+
+button{
+    border: none;
+    background-color: lightskyblue;
+    padding: .5rem 2.5rem;
+    border-radius: 5px;
+    color: #FFF;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+p{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+h3{
+    font-size: 22px;
+    font-weight: 600;
+}
