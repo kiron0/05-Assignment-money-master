@@ -2,6 +2,15 @@
     row-gap: 2rem;
 } */
 
+.header{
+    color: rgba(31, 132, 246, 0.8);
+}
+
+.icon-img{
+    width: 33px;
+    margin-bottom: 12px;
+}
+
 input{
     border: none;
     background-color: #DCDCDC;
