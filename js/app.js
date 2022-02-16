@@ -2,17 +2,13 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
     const incomeInput = document.getElementById('income-input').value;
     const foodInput = document.getElementById('food-input').value;
     const rentInput = document.getElementById('rent-input').value;
-    const transportInput = document.getElementById('transport-input').value;
+    const utilityInput = document.getElementById('utility-input').value;
     const othersInput = document.getElementById('others-input').value;
-
     let totalExpenses = document.getElementById('total-expenses');
     let balance = document.getElementById('balance');
-
-    total = parseInt(foodInput) + parseInt(rentInput) + parseInt(othersInput) + parseInt(transportInput);
+    total = parseInt(foodInput) + parseInt(rentInput) + parseInt(othersInput) + parseInt(utilityInput);
     totalExpenses.innerText = total;
-
     remaining = parseInt(incomeInput) - total;
-
     balance.innerText = remaining;
 
 });

@@ -21,24 +21,47 @@
     <main>
         <section class="container mt-5 gx-4">
             <div class="row">
-                <div class="col-md-6">
-                    <img src="images/money-master.jpg" alt="" class="img-fluid">
+                <div class="col-lg-6">
+                    <img src="./images/money-master.jpg" alt="" class="img-fluid">
                 </div>
-                <div class="col-md-6" style="background-color: #F8F8F8;">
-                    <h3 class="text-center mt-5">Income</h3>
-                    <p>Income: <input type="text" id="income-input"></p>
+                <div class="col-lg-6" style="background-color: #F8F8F8;">
+                    <h3 class="text-center mt-4">Income</h3>
+                    <div class="form-group d-flex justify-content-between md:mx-5 mt-2 align-items-center">
+                        <label for="focusedInput" class="fs-4">Income:</label>
+                        <input type="text" id="income-input">
+                    </div>
                     <h3 class="text-center">Expenses</h3>
-                    <p>Food: <input type="text" id="food-input"></p>
-                    <p>Rent: <input type=text" id="rent-input"></p>
-                    <p>Transportation: <input type=text" id="transport-input"></p>
-                    <p>Others: <input type="text" id="others-input"></p>
-                    <button type="button" id="calculate-btn" class="d-grid gap-2 col-6 mx-auto mb-4">Calculate</button>
+                    <div class="form-group d-flex justify-content-between md:mx-5 mt-2 align-items-center">
+                        <label for="focusedInput" class="fs-4">Food:</label>
+                        <input type="text" id="food-input">
+                    </div>
+                    <div class="form-group d-flex justify-content-between md:mx-5 mt-2 align-items-center">
+                        <label for="focusedInput" class="fs-4">Rent:</label>
+                        <input type="text" id="rent-input">
+                    </div>
+                    <div class="form-group d-flex justify-content-between md:mx-5 mt-2 align-items-center">
+                        <label for="focusedInput" class="fs-4">Utility Bills:</label>
+                        <input type=text" id="utility-input">
+                    </div>
+                    <div class="form-group d-flex justify-content-between md:mx-5 mt-2 align-items-center">
+                        <label for="focusedInput" class="fs-4">Others:</label>
+                        <input type="text" id="others-input">
+                    </div>
+
+                    <button type="button" id="calculate-btn"
+                        class="d-grid gap-2 col-6 mx-auto mb-4 mt-4">Calculate</button>
                     <h3 class="text-center">Total Expenses: <span id="total-expenses">00</span></h3>
-                    <h3 class="text-center">Balance: <span id="balance">00</span></h3>
-                    <p>Save: <input type="text" id="save-money-input"> % <button id="save-money">Save</button></p>
-                    <h3 class="text-center">Saving amount: <span id="saving-amount">00</span></h3>
+                    <h3 class="text-center mb-4">Balance: <span id="balance">00</span></h3>
+                    <div class="form-group d-flex justify-content-evenly mt-2 mb-4 align-items-center">
+                        <label for="save" class="fs-4">Save:</label>
+                        <input type="text" id="save-money-input"> % <button id="save-money">Save</button>
+                    </div>
+
+                    <h3 class=" text-center">Saving amount: <span id="saving-amount">00</span></h3>
                     <h3 class="text-center">Remaining Balance: <span id="remaining-balance">00</span></h3>
+
                 </div>
+            </div>
             </div>
         </section>
     </main>
