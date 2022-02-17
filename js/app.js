@@ -3,6 +3,7 @@ function getCurrentBalance() {
     return balanceTotal;
 }
 
+
 // calculate total expenses & balance
 function updateBalance() {
 
@@ -14,16 +15,18 @@ function updateBalance() {
     const totalExpenses = document.getElementById('total-expenses');
     const totalBalance = getCurrentBalance();
 
-    if (incomeInput >= 0 && foodInput >= 0 && rentInput >= 0 && utilityInput && othersInput >= 0) {
-        total = parseFloat(foodInput) + parseFloat(rentInput) + parseFloat(othersInput) + parseFloat(utilityInput);
+    total = parseFloat(foodInput) + parseFloat(rentInput) + parseFloat(othersInput) + parseFloat(utilityInput);
+
+    if (incomeInput >= 0 && foodInput >= 0 && rentInput >= 0 && utilityInput && othersInput >= 0 && incomeInput > totalExpenses) {
         totalExpenses.innerText = total;
         remaining = parseFloat(incomeInput) - total;
         totalBalance.innerText = remaining;
     }
     else {
-        alert('Only positive value & numeric allowed');
+        alert('Only positive value & numeric allowed\nEmpty string not allowed\nTotal Expenses value is greater than Income');
     }
 }
+
 
 document.getElementById('calculate-btn').addEventListener('click', function () {
     updateBalance();
