@@ -1,3 +1,4 @@
+// calculate total expenses & balance
 function calculateInput() {
     const incomeInput = document.getElementById('income-input').value;
     const foodInput = document.getElementById('food-input').value;
@@ -16,6 +17,8 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
     calculateInput();
 });
 
+
+// calculate save money part
 function saveMoney() {
     const incomeInput = document.getElementById('income-input');
     let incomeInputValue = incomeInput.value;
