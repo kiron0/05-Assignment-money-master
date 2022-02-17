@@ -9,11 +9,14 @@ function updateBalance() {
 
     const total = parseFloat(foodInput) + parseFloat(rentInput) + parseFloat(othersInput) + parseFloat(utilityInput);
 
-    if (isNaN(total) || total > incomeInput){
-        alert("you have not enough income to expense");
-    }else if(incomeInput <0 || foodInput < 0 || rentInput < 0 || utilityInput < 0 || othersInput < 0){
-        alert("Input only positive value");
-    }else{
+    if (isNaN(total)) {
+        alert("Input cannot be empty");
+    } else if (total > incomeInput) {
+        alert('You have not enough income to expense');
+    }
+    else if (incomeInput < 0 || foodInput < 0 || rentInput < 0 || utilityInput < 0 || othersInput < 0) {
+        alert("Please input positive value");
+    } else {
         const totalExpenses = document.getElementById('total-expenses');
         totalExpenses.innerText = total;
         const totalBalance = document.getElementById('balance');
@@ -34,23 +37,15 @@ function saveMoney() {
     const saveMoneyInput = document.getElementById('save-money-input').value;
     const savingAmount = document.getElementById('saving-amount');
 
-    // if (incomeInputValue >= 0 && saveMoneyInput >= 0) {
-    //     let savesMoney = (incomeInputValue * saveMoneyInput) / 100;
-    //     remainingBalance = parseFloat(balance.innerText) - savesMoney;
-    //     savingAmount.innerText = savesMoney;
-    //     remainingBalanceText.innerText = remainingBalance;
-    // }
-    // else {
-    //     alert('Negative value & String not allowed');
-    // }
+    let savesMoney = (incomeInputValue * saveMoneyInput) / 100;
 
-    if (isNaN(saveMoneyInput) || incomeInputValue > parseFloat(balance.innerText)) {
-        alert("you have not enough money for savings");
-      } else if (saveMoneyInput < 0) {
-        alert("don't write a nagative value");
-      } else {
-        savingAmount.innerText = incomeInputValue;
-        remainingBalanceText.innerText =
-          parseFloat(balance.innerText) - parseFloat(savingAmount.innerText);
-      }
+    if (isNaN(saveMoneyInput) || savesMoney > parseFloat(balance.innerText)) {
+        alert("You have not enough money for savings");
+    } else if (saveMoneyInput < 0) {
+        alert("Please input positive value");
+    } else {
+        remainingBalance = parseFloat(balance.innerText) - savesMoney;
+        savingAmount.innerText = savesMoney;
+        remainingBalanceText.innerText = remainingBalance;
+    }
 }
