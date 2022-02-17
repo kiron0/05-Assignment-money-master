@@ -1,6 +1,6 @@
 // calculate total expenses & balance
 function updateBalance() {
-
+    // get all the value by id
     const incomeInput = document.getElementById('income-input').value;
     const foodInput = document.getElementById('food-input').value;
     const rentInput = document.getElementById('rent-input').value;
@@ -9,6 +9,7 @@ function updateBalance() {
 
     const total = parseFloat(foodInput) + parseFloat(rentInput) + parseFloat(othersInput) + parseFloat(utilityInput);
 
+    // calculate button error handling
     if (isNaN(total)) {
         alert("Input cannot be empty");
     } else if (total > incomeInput) {
@@ -24,6 +25,7 @@ function updateBalance() {
     }
 }
 
+// calculate button
 document.getElementById('calculate-btn').addEventListener('click', function () {
     updateBalance();
 });
@@ -39,6 +41,7 @@ function saveMoney() {
 
     let savesMoney = (incomeInputValue * saveMoneyInput) / 100;
 
+    // save money part error handling
     if (isNaN(saveMoneyInput) || savesMoney > parseFloat(balance.innerText)) {
         alert("You have not enough money for savings");
     } else if (saveMoneyInput < 0) {
